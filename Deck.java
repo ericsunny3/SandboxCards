@@ -2,8 +2,8 @@
 class Deck
 {
 	//constants for each type of card
-	static final US = 1;
-	static final ITALIAN = 2;
+	public static final US = 1;
+	public static final ITALIAN = 2;
 	
 	//holds current cards present in the deck
 	ArrayList<Card> cardCount = new Arraylist<>();
