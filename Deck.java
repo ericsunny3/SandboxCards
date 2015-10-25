@@ -1,8 +1,9 @@
 
 class Deck
 {
-	final private STANDARD = 1;
-	final private ITALIAN = 2;
+	//constants for each type of card
+	static final private US = 1;
+	static final private ITALIAN = 2;
 	
 	//holds current cards present in the deck
 	ArrayList<Card> cardCount = new Arraylist<>();
@@ -13,39 +14,28 @@ class Deck
 		
 	}
 	
-	//create a full deck indicating if it has jokers and what type of deck it is
-	Deck(int type, boolean jokers)
+	//create a full deck indicating the type
+	Deck(int type)
 	{
-		int defaultSize = 52;
-		
-		if(jokers == true)
-			defaultSize += 2;
-		
-		switch(type)
+		//for any standard 52 card deck
+		for(i = 0; i < 52; i++)
 		{
-			case STANDARD: 
-				for(i = 0; i < defaultSize; i++)
-				{
-					cardCount.add(new Card(STANDARD));
-				}
-			case ITALIAN:
-				for(i = 0; i < defaultSize; i++)
-				{
-					cardCount.add(new Card(ITALIAN));
-				}
+			cardCount.add(new Card(type));
 		}
+		/*for any other types of decks that may exist. Please edit!
+	        for(i = 0; i < ??; i++)
+		{
+			cardCount.add(new Card(type));
+		}
+		*/
 	}
 	
 	//Remove and return top card of deck
-	public pop()
+	public Card pop()
 	{
-		cardCount.
-		
-		
-		return card
-	}
-	
-	}
+		Card tempCard = cardCount.get(cardCount.Size() - 1);
+		cardCount.remove(cardCount.Size() - 1);
 
-
+		return tempCard;
+	}
 }
